@@ -46,12 +46,12 @@
 										$message = "Ceci est un test.";
 
 										$headers = "Conext-type: text/plain; charset=utf-8\r\n";
-										$headers = "From: ecoosspro@gmail.com";
+										$headers .= "From: ecoosspro@gmail.com\r\n";
 
-										if(mail($to,$subject,$message,$headers))
+										if(mail($to, $subject, $message, $headers))
 											echo 'Envoyé !';
 										else
-											echo 'Erreur envoi.'
+											echo 'Erreur envoi.';
 									?>	
 								</section>
 							</div>
