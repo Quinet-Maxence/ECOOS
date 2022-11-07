@@ -40,35 +40,19 @@
 						<section class="wrapper style5">
 							<div class="inner">
 								<section>
-									<!--<h4>Formulaire</h4>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall">
-												<input type="text" name="name" placeholder="Name" required/>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<input type="email" name="email" placeholder="Email" required/>
-											</div>
-											<div class="col-12">
-												<select name="subject" id="subject">
-													<option value="">- Category -</option>
-													<option value="Operating System">Operating System</option>
-													<option value="Office">Office</option>
-													<option value="Adobe">Adobe</option>
-													<option value="Réclamation">Réclamation</option>
-												</select>
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Enter your message" rows="6" required></textarea>
-											</div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" value="Send Message" class="primary" /></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>-->
+									<?php
+										$to = "ecoosspro@gmail.com";
+										$subject = "test";
+										$message = "Ceci est un test.";
+
+										$headers = "Conext-type: text/plain; charset=utf-8\r\n";
+										$headers = "From: ecoosspro@gmail.com";
+
+										if(mail($to,$subject,$message,$headers))
+											echo 'Envoyé !';
+										else
+											echo 'Erreur envoi.'
+									?>	
 								</section>
 							</div>
 						</section>
