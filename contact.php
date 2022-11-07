@@ -35,12 +35,12 @@
 					<article id="main">
 						<header>
 							<h2>Elements</h2>
-							<p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
+							<p>Ici, vous pouvez nous contacter via mail</p>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 								<section>
-									<h4>Formulaire</h4>
+									<!--<h4>Formulaire</h4>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall">
@@ -56,11 +56,6 @@
 													<option value="Office">Office</option>
 													<option value="Adobe">Adobe</option>
 													<option value="Réclamation">Réclamation</option>
-													<!--<option value="">- Sujet -</option>
-													<option value="1">Achat</option>
-													<option value="1">Questions</option>
-													<option value="1">Besoin d'aide</option>
-													<option value="1">Garantit</option>-->
 												</select>
 											</div>
 											<div class="col-12">
@@ -72,22 +67,8 @@
 													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>
-											<?php
-											if(isset($_POST["message"])){
-												$message = "Ce message vous a été envoyé via la page contact du site
-												Ecooss
-												Nom : " . $_POST["nom"] . "
-												Email : " .  $_POST["email"] . "
-												Message : " . $_POST["message"];
-
-												$retour = mail("ecoosspro@gmail.com", $_POST["subject"], $message,"From: ecoosspro@gmail.com" ."\r\n" . "Reply-to: " . $_POST["email"]);
-												if($retour){
-													echo "<p> L'email a bien été envoyé. <p>";
-												}
-											}
-											?>
 										</div>
-									</form>
+									</form>-->
 								</section>
 							</div>
 						</section>
