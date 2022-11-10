@@ -76,7 +76,7 @@
 											if(isset($_POST["message"])){
 												$message = "Ce message vous a été envoyé via la page contact du site
 												Ecooss
-												Nom : " . $_POST["nom"] . "
+												Nom : " . $_POST["name"] . "
 												Email : " .  $_POST["email"] . "
 												Message : " . $_POST["message"];
 
