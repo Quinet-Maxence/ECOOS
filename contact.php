@@ -40,19 +40,54 @@
 						<section class="wrapper style5">
 							<div class="inner">
 								<section>
-									<?php
-										$to = "ecoosspro@gmail.com";
-										$subject = "test";
-										$message = "Ceci est un test.";
+								<h4>Formulaire</h4>
+									<form method="post" action="#">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall">
+												<input type="text" name="name" placeholder="Name" required/>
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<input type="email" name="email" placeholder="Email" required/>
+											</div>
+											<div class="col-12">
+												<select name="subject" id="subject">
+													<option value="">- Category -</option>
+													<option value="Operating System">Operating System</option>
+													<option value="Office">Office</option>
+													<option value="Adobe">Adobe</option>
+													<option value="Réclamation">Réclamation</option>
+													<!--<option value="">- Sujet -</option>
+													<option value="1">Achat</option>
+													<option value="1">Questions</option>
+													<option value="1">Besoin d'aide</option>
+													<option value="1">Garantit</option>-->
+												</select>
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Enter your message" rows="6" required></textarea>
+											</div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" value="Send Message" class="primary" /></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+											</div>
+											<?php
+											if(isset($_POST["message"])){
+												$message = "Ce message vous a été envoyé via la page contact du site
+												Ecooss
+												Nom : " . $_POST["nom"] . "
+												Email : " .  $_POST["email"] . "
+												Message : " . $_POST["message"];
 
-										$headers = "Conext-type: text/plain; charset=utf-8\r\n";
-										$headers .= "From: ecoosspro@gmail.com\r\n";
-
-										if(mail($to, $subject, $message, $headers))
-											echo 'Envoyé !';
-										else
-											echo 'Erreur envoi.';
-									?>	
+												$retour = mail("ecoosspro@gmail.com", $_POST["subject"], $message,"From: ecoosspro@gmail.com" ."\r\n" . "Reply-to: " . $_POST["email"]);
+												if($retour){
+													echo "<p> L'email a bien été envoyé. <p>";
+												}
+											}
+											?>
+										</div>
+									</form>
 								</section>
 							</div>
 						</section>
